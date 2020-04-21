@@ -1,0 +1,11 @@
+{
+  "name": "api-sign",
+  "version": "1.0.0",
+  "description": "Api para fazer sign in/sign up, persistindo os no banco de dados",
+  "main": "src/app.js",
+  "author": "lzrCampos (lazarocampos98@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
