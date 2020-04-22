@@ -6,6 +6,7 @@
     "author": "lzrCampos (lazarocampos98@gmail.com)",
     "license": "MIT",
     "scripts": {
+        "start": "node src/sever.js",
         "dev": "NODE_ENV=development nodemon src/server.js"
     },
     "dependencies": {
