@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  api-sign:
+    image: api-sign
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 5000
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 src/app.js
