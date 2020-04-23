@@ -11,10 +11,8 @@ class Database {
         try {
             const { host, port, db, authSource, user, pass } = mongooseConfig;
             return mongoose.connect(
-                `mongodb://${host}:${port}/${db}?authSource=${authSource}`,
+                `mongodb://${user}:${pass}@${host}:${port}/${db}?authSource=${authSource}`,
                 {
-                    user,
-                    pass,
                     useNewUrlParser: true,
                     useUnifiedTopology: true,
                     useFindAndModify: true,
