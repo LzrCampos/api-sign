@@ -9,14 +9,11 @@ class Database {
 
     mongooseConnection() {
         try {
-            const { host, port, db, authSource, user, pass } = mongooseConfig;
+            const { host, port, db, user, pass } = mongooseConfig;
             return mongoose.connect(
-                `mongodb://${user}:${pass}@${host}:${port}/${db}?authSource=${authSource}`,
+                `mongodb://${user}:${pass}@${host}:${port}/${db}`,
                 {
                     useNewUrlParser: true,
-                    useUnifiedTopology: true,
-                    useFindAndModify: true,
-                    useCreateIndex: true,
                 }
             );
         } catch (error) {
